@@ -1,4 +1,7 @@
+import { useRouter } from "next/router";
 const singleProduct = () => {
-  return <h1> Single Product</h1>;
+  const router = useRouter();
+  const productId = router.query.productId;
+  return <h1> Single Product {productId}</h1>;
 };
 export default singleProduct;
