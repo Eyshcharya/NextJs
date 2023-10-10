@@ -4,8 +4,11 @@ interface PostProps {
 const Post = ({ post }: PostProps) => {
   return (
     <>
-      <h3>{post.title}</h3>
-      <p>{post.body}</p>
+      <h3>
+        {post.id}.{post.title}
+      </h3>
+
+      <hr />
     </>
   );
 };
