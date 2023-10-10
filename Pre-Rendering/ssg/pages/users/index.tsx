@@ -1,3 +1,5 @@
+import User from "@/Components/user";
+
 const Users = ({ users }: Object[] | any) => {
   return (
     <>
@@ -5,8 +7,7 @@ const Users = ({ users }: Object[] | any) => {
       {users?.map((user: Object | any) => {
         return (
           <div key={user.id}>
-            <p>{user.name}</p>
-            <h6>{user.email}</h6>
+            <User user={user} />
           </div>
         );
       })}
@@ -19,7 +20,7 @@ export default Users;
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
 
   return { props: { users: data } };
 }
