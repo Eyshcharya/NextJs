@@ -2,7 +2,7 @@ interface UserProps {
   user: any;
 }
 
-const user = ({ user }: UserProps) => {
+const User = ({ user }: UserProps) => {
   return (
     <div>
       <h4>{user?.name}</h4>
@@ -10,4 +10,4 @@ const user = ({ user }: UserProps) => {
     </div>
   );
 };
-export default user;
+export default User;

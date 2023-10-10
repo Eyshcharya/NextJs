@@ -1,10 +1,14 @@
 import User from "@/Components/user";
 
-const Users = ({ users }: Object[] | any) => {
+interface UsersProps {
+  users: Array<any>;
+}
+
+const Users = ({ users }: UsersProps) => {
   return (
     <>
       <h1>List of Users</h1>
-      {users?.map((user: Object | any) => {
+      {users?.map((user) => {
         return (
           <div key={user.id}>
             <User user={user} />
