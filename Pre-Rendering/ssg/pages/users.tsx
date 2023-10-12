@@ -1,4 +1,4 @@
-import User from "@/Components/user";
+import User from "@/Components/User";
 
 interface UsersProps {
   users: Array<any>;
