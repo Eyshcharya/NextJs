@@ -34,12 +34,12 @@ export async function getStaticPaths() {
 // Pre-render and Fetch Data
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params } = context;
+  // console.log(params?.postId);
 
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params?.postId}`
   );
   const data = await response.json();
-  console.log(params?.postId);
 
   return { props: { singlePost: data } };
 }
