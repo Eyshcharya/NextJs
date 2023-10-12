@@ -1,4 +1,4 @@
-import Post from "@/Components/Post";
+import Link from "next/link";
 
 interface PostsProps {
   posts: Array<any>;
@@ -11,7 +11,9 @@ const Posts = ({ posts }: PostsProps) => {
       {posts?.map((post) => {
         return (
           <div key={post.id}>
-            <Post post={post} />
+            <Link href={`posts/${post.id}`} passHref>
+              {post.id}.{post.title}
+            </Link>
           </div>
         );
       })}
@@ -20,6 +22,7 @@ const Posts = ({ posts }: PostsProps) => {
 };
 export default Posts;
 
+// Pre-rendering and fetching data.
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await response.json();
