@@ -7,6 +7,7 @@ interface DashboardData {
   following: number;
 }
 
+// fetching data in client side using fetch api
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(

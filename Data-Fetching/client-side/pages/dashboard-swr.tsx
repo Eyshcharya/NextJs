@@ -1,5 +1,6 @@
 import useSWR from "swr";
 
+// fetching data in client side using swr - recommended by Next.js
 const fetcher = async () => {
   const response = await fetch("http://localhost:4000/dashboard");
   const data = await response.json();
