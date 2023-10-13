@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 19.99,
+      "description": "A high-quality product for your everyday needs."
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 24.95,
+      "description": "Compact and stylish, perfect for any occasion."
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 39.99,
+      "description": "Enhance your home with this innovative solution."
+    },
+    {
+      "id": 4,
+      "title": "Product 4",
+      "price": 14.99,
+      "description": "Affordable and reliable for all your tasks."
+    },
+    {
+      "id": 5,
+      "title": "Product 5",
+      "price": 49.99,
+      "description": "Experience premium quality and comfort."
+    },
+    {
+      "id": 6,
+      "title": "Product 6",
+      "price": 29.95,
+      "description": "Stay organized and on top of your game."
+    },
+    {
+      "id": 7,
+      "title": "Product 7",
+      "price": 69.99,
+      "description": "Elevate your outdoor adventures with ease."
+    },
+    {
+      "id": 8,
+      "title": "Product 8",
+      "price": 9.99,
+      "description": "Simplify your daily routine with this product."
+    },
+    {
+      "id": 9,
+      "title": "Product 9",
+      "price": 34.99,
+      "description": "A versatile and durable option for any project."
+    },
+    {
+      "id": 10,
+      "title": "Product 10",
+      "price": 59.99,
+      "description": "Unleash your creativity with this amazing tool."
+    }
+  ]
+}
