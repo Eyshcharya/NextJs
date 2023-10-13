@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface ProductProps {
+export interface ProductProps {
   products: Array<any>;
 }
 
