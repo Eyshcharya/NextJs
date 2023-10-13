@@ -21,6 +21,10 @@ const Category = ({ products }: ProductProps, { category }: ParsedUrlQuery) => {
 export default Category;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { req, res } = context;
+  console.log(req.headers.cookie);
+  res.setHeader("Set-Cookie", ["name=Batman"]);
+
   // console.log(context);
   // const { category }: any = context.params;
   const { category } = context.query;
