@@ -1,3 +1,5 @@
+import { GetServerSidePropsContext } from "next";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 interface EventProps {
@@ -5,14 +7,18 @@ interface EventProps {
 }
 
 const Events = ({ events }: EventProps) => {
+  const router = useRouter();
   const [sportEvents, setSportEvents] = useState<[]>();
 
+  // client side data fetching
   const fetchSportsEvents = async () => {
     const response = await fetch(
       `http://localhost:4000/events?category=Category A`
     );
     const data = await response.json();
     setSportEvents(data);
+    // shallow route
+    router.push(`/events?category=Category A`, undefined, { shallow: true });
   };
 
   return (
@@ -57,8 +63,10 @@ const Events = ({ events }: EventProps) => {
 export default Events;
 
 // logic for server side rendering
-export async function getServerSideProps() {
-  const response = await fetch(`http://localhost:4000/events`);
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { category } = context.query;
+  const queryString = category ? "category=sports" : "";
+  const response = await fetch(`http://localhost:4000/events?${queryString}`);
   const data = await response.json();
 
   return {
