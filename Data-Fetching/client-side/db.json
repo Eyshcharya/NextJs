@@ -4,5 +4,78 @@
     "posts": 25,
     "followers": 5000,
     "following": 300
-  }
+  },
+
+  "events": [
+    {
+      "id": 1,
+      "title": "Event 1",
+      "description": "Description for Event 1",
+      "category": "Category A",
+      "date": "2023-10-15"
+    },
+    {
+      "id": 2,
+      "title": "Event 2",
+      "description": "Description for Event 2",
+      "category": "Category B",
+      "date": "2023-10-20"
+    },
+    {
+      "id": 3,
+      "title": "Event 3",
+      "description": "Description for Event 3",
+      "category": "Category A",
+      "date": "2023-10-25"
+    },
+    {
+      "id": 4,
+      "title": "Event 4",
+      "description": "Description for Event 4",
+      "category": "Category C",
+      "date": "2023-11-01"
+    },
+    {
+      "id": 5,
+      "title": "Event 5",
+      "description": "Description for Event 5",
+      "category": "Category B",
+      "date": "2023-11-05"
+    },
+    {
+      "id": 6,
+      "title": "Event 6",
+      "description": "Description for Event 6",
+      "category": "Category A",
+      "date": "2023-11-10"
+    },
+    {
+      "id": 7,
+      "title": "Event 7",
+      "description": "Description for Event 7",
+      "category": "Category D",
+      "date": "2023-11-15"
+    },
+    {
+      "id": 8,
+      "title": "Event 8",
+      "description": "Description for Event 8",
+      "category": "Category C",
+      "date": "2023-11-20"
+    },
+    {
+      "id": 9,
+      "title": "Event 9",
+      "description": "Description for Event 9",
+      "category": "Category A",
+      "date": "2023-11-25"
+    },
+    {
+      "id": 10,
+      "title": "Event 10",
+      "description": "Description for Event 10",
+      "category": "Category B",
+      "date": "2023-12-01"
+    }
+  ]
 }
