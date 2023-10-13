@@ -33,7 +33,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     `http://localhost:4000/products?category=${category}`
   );
   const data = await response.json();
-  console.log(`Pre-rendering Product List for Category: ${category} `);
+  // console.log(`Pre-rendering Product List for Category: ${category} `);
 
   return {
     props: {

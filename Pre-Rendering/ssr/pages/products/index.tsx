@@ -26,7 +26,7 @@ export default Products;
 export async function getServerSideProps() {
   const response = await fetch("http://localhost:4000/products");
   const data = await response.json();
-  console.log("Pre-rendering Product List");
+  // console.log("Pre-rendering Product List");
 
   return {
     props: {
