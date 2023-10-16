@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
 import { Page } from "@/types/page";
+import Head from "next/head";
 
 type Props = AppProps & {
   Component: Page;
@@ -21,6 +22,10 @@ export default function App({ Component, pageProps }: Props) {
   }
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>NextJs</title>
+        <meta name='description' content='Awesome Framework' />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />
