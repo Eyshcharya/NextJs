@@ -1,6 +1,6 @@
 // import styles from "../styles/About.module.css";
-import Header from "@/Components/Header";
-import styles from "../styles/About.module.scss";
+import Header from "@/Components/Layout/Header";
+import styles from "styles/About.module.scss";
 import styled from "styled-components";
 import type { ReactNode, ComponentType } from "react";
 

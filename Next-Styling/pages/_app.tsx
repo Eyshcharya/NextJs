@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
-import Header from "@/Components/Header";
-import Footer from "@/Components/Footer";
+import Header from "@/Components/Layout/Header";
+import Footer from "@/Components/Layout/Footer";
 import { Page } from "@/types/page";
 import Head from "next/head";
 
