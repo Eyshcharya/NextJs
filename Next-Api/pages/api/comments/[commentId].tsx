@@ -18,6 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json({ message: "Comment Deleted", comment });
     }
   } else {
-    res.status(404).json({ message: "Comment Not Found" });
+    res.status(404).json({ message: "Comment Not Found !" });
   }
 }
