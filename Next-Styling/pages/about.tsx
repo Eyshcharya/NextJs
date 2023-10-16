@@ -1,6 +1,8 @@
 // import styles from "../styles/About.module.css";
+import Header from "@/Components/Header";
 import styles from "../styles/About.module.scss";
 import styled from "styled-components";
+import type { ReactNode, ComponentType } from "react";
 
 const Title = styled.h1`
   font-size: 50px;
@@ -18,3 +20,13 @@ const About = () => {
   );
 };
 export default About;
+
+// Removing footer only fot this page
+About.getLayout = (page: ComponentType): ReactNode => {
+  return (
+    <>
+      <Header />
+      {page}
+    </>
+  );
+};
