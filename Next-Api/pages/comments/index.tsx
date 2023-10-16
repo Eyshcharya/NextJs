@@ -1,5 +1,4 @@
 import { CommentProps } from "@/utils/interfaces";
-import { log } from "console";
 import { useState } from "react";
 
 const CommentsPage = () => {
@@ -26,6 +25,15 @@ const CommentsPage = () => {
     // console.log(data);
   };
 
+  // delete comment
+  const deleteComment = async (commentId: number) => {
+    const response = await fetch(`api/comments/${commentId}`, {
+      method: `DELETE`,
+    });
+    const data = await response.json();
+    console.log(data);
+    fetchComments();
+  };
   return (
     <>
       <input
@@ -47,7 +55,8 @@ const CommentsPage = () => {
         return (
           <div key={comment.id}>
             <h3>
-              {comment.id} - {comment.text}
+              {comment.id} - {comment.text}{" "}
+              <button onClick={() => deleteComment(comment.id)}>Delete</button>
             </h3>
             <hr />
           </div>
