@@ -31,6 +31,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: GetStaticPropsContext) {
   const commentId: any = context.params?.commentId?.toString();
 
+  // Should not call our own api inside getStaticProps
   const comment = Comments.find(
     (comment) => comment.id === parseInt(commentId)
   );
